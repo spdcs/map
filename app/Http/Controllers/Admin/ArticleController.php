@@ -33,11 +33,17 @@ class ArticleController extends Controller
         $this->validate($request, [
             'title' => 'required|max:255', //必填、最大長度 255
             'body' => 'required', //必填
+            'address' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
         ]);
 
         $article = new Article;
         $article->title = $request->get('title');
+        $article->address = $request->get('address');
         $article->body = $request->get('body');
+        $article->lat = $request->get('lat');
+        $article->lng = $request->get('lng');
         $article->user_id = $request->user()->id;
 
         if ($article->save()) {
@@ -64,11 +70,18 @@ class ArticleController extends Controller
         $this->validate($request, [
             'title' => 'required|max:255', //必填、最大長度 255
             'body' => 'required', //必填
+            'address' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
         ]);
 
         $article = Article::find($id);
         $article->title = $request->get('title');
+        $article->address = $request->get('address');
         $article->body = $request->get('body');
+        $article->lat = $request->get('lat');
+        $article->lng = $request->get('lng');
+
 
         if ($article->save()) {
             return redirect('admin/article/');

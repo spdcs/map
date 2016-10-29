@@ -18,10 +18,11 @@
                         @foreach ($articles as $article)
                             <hr>
                             <div class="article">
-                                <h4>{{ $article->title }}</h4>
+                                <h4>標題:{{ $article->title }}</h4>
                                 <div class="content">
                                     <p>
-                                        {{ $article->body }}
+                                        內容:{{ $article->body }}<br>
+                                        地址:{{ $article->address }}
                                         {{ $article->user }}
                                     </p>
                                 </div>
