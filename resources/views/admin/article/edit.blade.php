@@ -33,9 +33,9 @@
                             <textarea name="body" rows="10" class="form-control" required="required"
                                       placeholder="請輸入內容" >{{ $article->body }}</textarea>
                             {{--</div>--}}<br>
-                            <input type="text" name="lat" class="form-control" required="required"
+                            <input type="hidden" name="lat" class="form-control" required="required"
                                    value="{{ $article->lat }}">
-                            <input type="text" name="lng" class="form-control" required="required"
+                            <input type="hidden" name="lng" class="form-control" required="required"
                                    value="{{ $article->lng }}">
                             {{--<div class="form-group">--}}
                             <button type="submit" class="btn btn-lg btn-info">提交留言</button>
