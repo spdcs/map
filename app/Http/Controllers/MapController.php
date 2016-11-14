@@ -12,4 +12,7 @@ class MapController extends Controller
     {
         return view('map')->withArticles(\App\Article::all());
     }
+    
 }
+
+
