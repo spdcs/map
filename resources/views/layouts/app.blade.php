@@ -10,6 +10,7 @@
     <link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    {{--<script src="resources/assets/sass/blade.css"></script>--}}
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-default navbar-static-top">
@@ -34,7 +35,7 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="{{ url('/home') }}">Home</a></li>
+                <li><a href="{{ url('/map') }}">map</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

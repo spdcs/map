@@ -9,6 +9,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8hRHdZEOVwpfzjh_Yo5Pu0Aw_RrsOsT8&callback=initMap">
     </script>
     </center>
+
     <script type="text/javascript">
         function initMap() {
             var geocoder = new google.maps.Geocoder();
@@ -18,7 +19,23 @@
                 zoom: 8
             });
 
+            var infoWindow = new google.maps.InfoWindow();
+            var markerNum = locationSelect.options[locationSelect.selectedIndex].value;
+
         }
 
+        function createMarker(latlng, name, address) {
+            var html = "<b>" + name + "</b> <br/>" + address;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: latlng
+            });
+            google.maps.event.addListener(marker, 'click', (function (marker, infocontent, infowindow) {
+                return function () {
+                    infowindow.setContent(infocontent);
+                    infowindow.open(map, marker);
+                };
+            })(marker, infocontent, infowindow));
+        }
     </script>
 @endsection
