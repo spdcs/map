@@ -14,9 +14,6 @@
 
 </head>
 <body id="app-layout">
-<div class="top_image">
-    <center><img src="resources/assets/img/hand2.png"></center>
-</div>
 <nav class="navbar toprow navbar-static-top">
     <div class="container">
         <div class="navbar-header">

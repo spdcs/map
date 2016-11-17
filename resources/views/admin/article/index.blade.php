@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <link rel="stylesheet" href="{{asset('resources/assets/sass/blade.css')}}">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -34,6 +35,7 @@
                                 <button type="submit" class="btn btn-danger">刪除</button>
                             </form>
                         @endforeach
+
 
                     </div>
                 </div>

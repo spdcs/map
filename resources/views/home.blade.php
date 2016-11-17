@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="top_image">
+        <center><img src="resources/assets/img/hand2.png"></center>
+    </div>
     <div id="title" style="text-align: center;">
         <h1>Learn Laravel 5</h1>
         <div style="padding: 5px; font-size: 16px;">Learn Laravel 5</div>
