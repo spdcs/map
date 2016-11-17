@@ -11,6 +11,7 @@
     <hr>
     <div id="content">
         <ul>
+            <form>
             @foreach ($articles as $article)
                 <li style="margin: 50px 0;">
                     <div class="title">
@@ -23,6 +24,7 @@
                     </div>
                 </li>
             @endforeach
+            </form>
         </ul>
     </div>
 @endsection
