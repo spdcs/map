@@ -25,7 +25,12 @@
     </div>
     <div id="content" style="margin: 20px;">
         <p>
-            {{ $article->body }}
+            內容：{{ $article->body }}
+        </p>
+    </div>
+    <div id="content" style="margin: 20px;">
+        <p>
+            地址：{{ $article->address }}
         </p>
     </div>
 

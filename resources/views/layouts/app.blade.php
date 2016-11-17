@@ -14,10 +14,12 @@
 
 </head>
 <body id="app-layout">
+<div class="top_image">
+    <center><img src="resources/assets/img/hand.png"></center>
+</div>
 <nav class="navbar toprow navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-
             <!-- Collapsed Hamburger -->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#app-navbar-collapse">
