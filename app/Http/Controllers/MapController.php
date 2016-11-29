@@ -26,7 +26,7 @@ class MapController extends Controller
 
         $collection->each(function($article)
         {
-            $content = $article->title;
+            $content = "標題:".$article->title."<br>內容:".$article->body."<br>地址:".$article->address;
 
             \Mapper::informationWindow($article->lat, $article->lng, $content);
         });
