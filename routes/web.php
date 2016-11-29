@@ -33,7 +33,8 @@ Route::resource('photo', 'PhotoController');//跑七項功能
 Route::get('article/{id}', 'ArticleController@show');
 //{id} 指代任意字符串，在我們的規劃中，此字段為文章 ID，為數字
 
-Route::resource('map', 'MapController@show');
+Route::get('map', 'MapController@show');
+Route::get('map', 'MapController@index');
 
 Route::get('article/{id}/edit', 'ArticleController@edit');
 Route::patch('article/{id}', 'ArticleController@update');

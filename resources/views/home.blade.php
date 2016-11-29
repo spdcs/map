@@ -16,13 +16,17 @@
                 <li style="margin: 50px 0;">
                     <div class="title">
                         <a href="{{ url('article/'.$article->id) }}">
-                            <h4>{{ $article->title }}</h4>
+                            <h4>主旨:{{ $article->title }}</h4>
                         </a>
                     </div>
                     <div class="body">
-                        <p>{{ $article->body }}</p>
+                        <p>內容:{{ $article->body }}</p>
+                    </div>
+                    <div class="body">
+                        <p>地址:{{ $article->address }}</p>
                     </div>
                 </li>
+                <hr>
             @endforeach
             </form>
         </ul>

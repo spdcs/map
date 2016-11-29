@@ -18,8 +18,8 @@
                         </td>
                         <td>
                             @if($data['level'] =='0')
-                                <input type="radio" name="member" value="0" checked> 普通會員 <input type="radio"
-                                                                                                 name="member"
+                                <input type="radio" name="level" value="0" checked> 普通會員 <input type="radio"
+                                                                                                 name="level"
                                                                                                  value="1">管理員
                             @endif
                             @if($data['level'] =='1')
