@@ -19,7 +19,9 @@
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
     Route::get('/', 'HomeController@index');
-    Route::resource('member', 'MemberController@show');
+    Route::get('member/list', 'MemberController@show');
+    Route::post('member/update', 'MemberController@update');
+    Route::resource('member', 'MemberController');
     Route::resource('article', 'ArticleController');
 });
 //管理員登入

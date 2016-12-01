@@ -10,14 +10,19 @@ use App\User;
 
 class MemberController extends Controller
 {
-    public function update($id)
+    public function update()
     {
+
+        $input = \Input::all();
+        $id = $input['id'];
+        $level = $input['level'];
+
         $user = User::find($id);
-        $input = Input::all();
-        $user = new User();
-        $user->level = $input['level'];
+        $user->level = $level;
         $user->save();
-        return view('admin/member');
+        $allUser = User::all();
+
+        return view('admin/member',['user'=>$allUser]);
     }
     public function show()
     {

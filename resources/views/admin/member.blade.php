@@ -5,7 +5,9 @@
         {{--{{$user}}--}}
         <table class="table">
             @foreach($user as $key => $data)
-                <form action="{{url("/admin/member")}}">
+                <form action="{{url("/admin/member/update")}}" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="id" value="{{$data['id']}}">
                     <tr class="<?=($data['level'] == '0') ? 'info' : 'danger'?>"> {{--bootstrap--}}
                         <td>
                             {{$key+1}}
@@ -19,12 +21,12 @@
                         <td>
                             @if($data['level'] =='0')
                                 <input type="radio" name="level" value="0" checked> 普通會員 <input type="radio"
-                                                                                                 name="level"
-                                                                                                 value="1">管理員
+                                                                                                name="level"
+                                                                                                value="1">管理員
                             @endif
                             @if($data['level'] =='1')
-                                <input type="radio" name="member" value="0"> 普通會員 <input type="radio" name="member"
-                                                                                         value="1" checked>管理員
+                                <input type="radio" name="level" value="0"> 普通會員 <input type="radio" name="level"
+                                                                                        value="1" checked>管理員
                             @endif
                         </td>
                         <td>
