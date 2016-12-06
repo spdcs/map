@@ -12,7 +12,7 @@
 
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
-                                <strong>新增失败</strong> 输入不符合要求<br><br>
+                                <strong>新增失敗</strong> 輸入不符合要求<br><br>
                                 {!! implode('<br>', $errors->all()) !!}
                             </div>
                         @endif
