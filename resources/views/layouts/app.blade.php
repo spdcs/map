@@ -35,18 +35,18 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="{{ url('/map') }}">map</a></li>
+                <li><a class="top-link" href="{{ url('/map') }}">map</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
+                    <li><a class="top-link" href="{{ url('/login') }}">Login</a></li>
+                    <li><a class="top-link" href="{{ url('/register') }}">Register</a></li>
                 @elseif (Auth::user()->level > 0)
-                    <li><a href="{{ url('/admin/member/list') }}">會員管理</a></li>
-                    <li><a href="{{ url('/admin') }}">管理文章</a></li>
+                    <li><a class="top-link" href="{{ url('/admin/member/list') }}">會員管理</a></li>
+                    <li><a class="top-link" href="{{ url('/admin') }}">管理文章</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
