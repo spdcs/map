@@ -14,10 +14,10 @@
                             </div>
                         @endif
 
-                        <a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>
+                        {{--<a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>--}}
 
                         @foreach ($articles as $article)
-                            <hr>
+                            {{--<hr>--}}
                             <div class="article">
                                 <h4>標題:{{ $article->title }}</h4>
                                 <div class="content">

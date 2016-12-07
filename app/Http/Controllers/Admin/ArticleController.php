@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Article;
+use App\Http\Controllers\Auth;
 
 class ArticleController extends Controller
 {
@@ -18,7 +19,7 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('admin/article/create');
+        return view('admin.article.create');
     }
 
     public function edit($id)
@@ -46,7 +47,7 @@ class ArticleController extends Controller
         $article->user_id = $request->user()->id;
 
         if ($article->save()) {
-            return redirect('admin/article');
+            return redirect('/');
         } else {
             return redirect()->back()->withInput()->withErrors('保存失敗！');
         }
@@ -83,6 +84,9 @@ class ArticleController extends Controller
 
 
         if ($article->save()) {
+            if(\Auth::user()->level == 0){
+                return redirect('/');
+            }
             return redirect('admin/article/');
         } else {
             return redirect()->back()->withInput()->withErrors('保存失敗！');

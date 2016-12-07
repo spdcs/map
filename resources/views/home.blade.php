@@ -21,14 +21,24 @@
                     <li style="margin: 50px 0;">
                         <div class="title">
                             <a href="{{ url('article/'.$article->id) }}">
-                                <h4>主旨:{{ $article->title }}</h4>
+                                <h4>主旨：{{ $article->title }}</h4>
                             </a>
                         </div>
+                        <input type="hidden" value="{{$article->user_id}}">
                         <div class="body">
-                            <p>內容:{{ $article->body }}</p>
+                            <p>內容：{{ $article->body }}</p>
                         </div>
                         <div class="body">
-                            <p>地址:{{ $article->address }}</p>
+                            <p>地址：{{ $article->address }}</p>
+                        </div>
+                        <div class="edit-btn">
+                            @if($article->user_id == Auth::user()->id)
+                                <a href="{{ url('admin/article/'.$article->id.'/edit') }}" class="btn btn-success">編輯</a>
+                                <form action="{{ url('admin/article/'.$article->id) }}" method="POST" style="display: inline;">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-danger">刪除</button>
+                            @endif
                         </div>
                     </li>
                     <hr>
