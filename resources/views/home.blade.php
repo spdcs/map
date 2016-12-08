@@ -31,15 +31,17 @@
                         <div class="body">
                             <p>地址：{{ $article->address }}</p>
                         </div>
-                        <div class="edit-btn">
-                            @if($article->user_id == Auth::user()->id)
-                                <a href="{{ url('admin/article/'.$article->id.'/edit') }}" class="btn btn-success">編輯</a>
-                                <form action="{{ url('admin/article/'.$article->id) }}" method="POST" style="display: inline;">
-                                    {{ method_field('DELETE') }}
-                                    {{ csrf_field() }}
-                                    <button type="submit" class="btn btn-danger">刪除</button>
-                            @endif
-                        </div>
+                        {{--<div class="edit-btn">--}}
+                            {{--@if($article->user_id == 1)--}}
+                                {{--<a href="{{ url('admin/article/'.$article->id.'/edit') }}" class="btn btn-success">編輯</a>--}}
+                                {{--<form action="{{ url('admin/article/'.$article->id) }}" method="POST" style="display: inline;">--}}
+                                    {{--{{ method_field('DELETE') }}--}}
+                                    {{--{{ csrf_field() }}--}}
+                                {{--<button type="submit" class="btn btn-danger">刪除</button>--}}
+                                {{--</form>--}}
+                                {{--@else--}}
+                            {{--@endif--}}
+                        {{--</div>--}}
                     </li>
                     <hr>
                 @endforeach

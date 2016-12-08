@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home')->withArticles(\App\Article::all());
+    }
+
+
+    public function destroy($id)
+    {
+        Article::find($id)->delete();
+        return redirect()->back()->withInput()->withErrors('刪除成功！');
     }
 }

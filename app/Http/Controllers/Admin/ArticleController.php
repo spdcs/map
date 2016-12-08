@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Article;
-use App\Http\Controllers\Auth;
+use App\Http\Controllers\user;
 
 class ArticleController extends Controller
 {
