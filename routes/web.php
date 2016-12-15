@@ -22,13 +22,14 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
     Route::get('member/list', 'MemberController@show');
     Route::post('member/update', 'MemberController@update');
     Route::resource('member', 'MemberController');
-    Route::get('selfarticle', 'Self_articleController@show');
+    //Route::get('selfarticle', 'Self_articleController@show');
     Route::resource('article', 'ArticleController');
 });
 //管理員登入
 
 Route::group(['middleware' => 'auth'], function() { //會員登入
     Route::post('comment', 'CommentController@store');
+    Route::get('selfarticle', 'Self_articleController@show');
 });
 
 Route::resource('photo', 'PhotoController');//跑七項功能
