@@ -23,6 +23,14 @@
     <div id="date" style="text-align: right;">
         {{ $article->updated_at }}
     </div>
+    <div id="event" style="margin: 20px;">
+        <p>
+            事件：@if($article->event==0)金錢
+            @elseif($article->event==1)人力
+            @else物資
+            @endif
+        </p>
+    </div>
     <div id="content" style="margin: 20px;">
         <p>
             內容：{{ $article->body }}

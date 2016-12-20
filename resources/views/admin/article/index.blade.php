@@ -17,14 +17,16 @@
                         {{--<a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>--}}
 
                         @foreach ($articles as $article)
-                            {{--<hr>--}}
                             <div class="article">
                                 <h4>標題:{{ $article->title }}</h4>
                                 <div class="content">
                                     <p>
-                                        內容:{{ $article->body }}<br>
-                                        地址:{{ $article->address }}
-                                        {{ $article->user }}
+                                        地址:{{ $article->address }}<br>
+                                        事件:@if($article->event==0)金錢
+                                        @elseif($article->event==1)人力
+                                            @else物資
+                                        @endif<br>
+                                        內容:{{ $article->body }}
                                     </p>
                                 </div>
                             </div>
