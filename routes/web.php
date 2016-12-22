@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 
 Route::group(['middleware' => 'auth'], function() { //會員登入
     Route::post('comment', 'CommentController@store');
-    Route::get('selfarticle', 'Self_articleController@show');
+    Route::get('selfarticle', 'Auth\SelfArticleController@show');
 });
 
 Route::resource('photo', 'PhotoController');//跑七項功能
