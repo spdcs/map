@@ -9,19 +9,25 @@
             <div class="icon_image">
                 <img src="resources/assets/img/box2.png">
             </div>
-            <h3>物資</h3>
+            <div class="textbox">
+            <p class="text">物資</p>
+            </div>
         </div>
         <div class="col-lg-3 col-sm-3 section">
             <div class="icon_image">
                 <img src="resources/assets/img/people.png">
             </div>
-            <h3>人力</h3>
+            <div class="textbox">
+            <p class="text">人力</p>
+            </div>
         </div>
         <div class="col-lg-3 col-sm-3 section">
             <div class="icon_image">
                 <img src="resources/assets/img/money.png">
             </div>
-            <h3>金錢</h3>
+            <div class="textbox">
+            <p class="text">金援</p>
+            </div>
         </div>
     </div>
 @endsection

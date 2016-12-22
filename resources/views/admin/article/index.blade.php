@@ -22,7 +22,7 @@
                                 <div class="content">
                                     <p>
                                         地址:{{ $article->address }}<br>
-                                        事件:@if($article->event==0)金錢
+                                        事件:@if($article->event==0)金援
                                         @elseif($article->event==1)人力
                                             @else物資
                                         @endif<br>
