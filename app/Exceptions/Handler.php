@@ -49,10 +49,6 @@ class Handler extends ExceptionHandler
             $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
             return $whoops->handleException($exception);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> master
         return parent::render($request, $exception);
     }
 

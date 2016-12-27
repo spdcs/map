@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">文章管理</div>
+                    <div class="panel-heading">我的文章</div>
                     <div class="panel-body">
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
@@ -16,7 +16,7 @@
 
                         {{--<a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>--}}
 
-                        @foreach ($articles as $article)
+                        @foreach ($user as $article)
                             {{--<hr>--}}
                             <div class="article">
                                 <h4>標題:{{ $article->title }}</h4>
