@@ -10,7 +10,7 @@
                 <img src="resources/assets/img/box2.png">
             </div>
             <div class="textbox">
-            <p class="text">物資</p>
+            <h3>物資</h3>
             </div>
         </div>
         <div class="col-lg-3 col-sm-3 section">
@@ -18,7 +18,7 @@
                 <img src="resources/assets/img/people.png">
             </div>
             <div class="textbox">
-            <p class="text">人力</p>
+            <h3>人力</h3>
             </div>
         </div>
         <div class="col-lg-3 col-sm-3 section">
@@ -26,7 +26,7 @@
                 <img src="resources/assets/img/money.png">
             </div>
             <div class="textbox">
-            <p class="text">金援</p>
+            <h3>金援</h3>
             </div>
         </div>
     </div>
