@@ -10,4 +10,8 @@ class Article extends Model
     {
         return $this->hasMany('App\Comment', 'article_id', 'id');
     }
+    public function hasManyUser()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
