@@ -26,9 +26,11 @@
                         </div>
                         <input type="hidden" value="{{$article->user_id}}">
                         <div class="body">
+                            <p>事件：@if($article->event==0)金援
+                                @elseif($article->event==1)人力
+                                @else物資
+                                @endif</p>
                             <p>內容：{{ $article->body }}</p>
-                        </div>
-                        <div class="body">
                             <p>地址：{{ $article->address }}</p>
                         </div>
                         {{--<div class="edit-btn">--}}
