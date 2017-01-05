@@ -31,13 +31,11 @@ a:link {
     transform:rotatey(360deg);
 }
 .project{
-    margin-top: 20px;
-    margin: 0px 400px 0px 400px;
-    width: 800px;
-    height: 300px;
+    margin-left: 25%;
+    width: 900px;
     text-align: center;
     vertical-align: middle;
-    display: inline-block;
+    display: block;
 }
 .icon_image{
     float:left;
