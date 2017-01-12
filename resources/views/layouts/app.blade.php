@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Lovemap</title>
 
     <link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
@@ -27,13 +27,13 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                LoveMap
-            </a>
         </div>
 
-        <div class="collapse navbar-collapse" id="app-navbar-collapse">
+        <div class="collapse navbar-collapse top-link-a" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
+            <a class="navbar-brand top-link-a" href="{{ url('/') }}">
+                LoveMap
+            </a>
             <ul class="nav navbar-nav">
                 <li><a class="top-link" href="{{ url('/map') }}">map</a></li>
             </ul>
@@ -46,7 +46,7 @@
                     <li><a class="top-link" href="{{ url('/register') }}">Register</a></li>
                 @elseif (Auth::user()->level > 0)
                     <li><a class="top-link" href="{{ url('/admin/member/list') }}">會員管理</a></li>
-                    <li><a class="top-link" href="{{ url('/admin') }}">管理文章</a></li>
+                    <li><a class="top-link" href="{{ url('/admin/article') }}">管理文章</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>

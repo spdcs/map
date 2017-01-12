@@ -29,13 +29,18 @@ a:link {
 .top-link:hover{
     -webkit-transform:rotatey(360deg);
     transform:rotatey(360deg);
+    color: #0019ff;
+}
+.top-link-a a{
+    color: #ffffff;
+}
+.top-link-a:hover{
+    color: #0019ff;
 }
 .project{
-    margin-left: 33%;
-    width: 900px;
     text-align: center;
-    vertical-align: middle;
     display: block;
+    margin-left: 33.33%;
 }
 .icon_image{
     float:left;
@@ -44,6 +49,9 @@ a:link {
     -moz-box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
     -webkit-box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
     box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+}
+.section {
+    float: left;
 }
 .section h3{
     float: none;
