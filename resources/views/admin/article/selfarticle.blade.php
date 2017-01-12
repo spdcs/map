@@ -23,6 +23,10 @@
                                 <div class="content">
                                     <p>
                                         內容:{{ $article->body }}<br>
+                                        事件:@if($article->event==0)金援
+                                        @elseif($article->event==1)人力
+                                        @else物資
+                                        @endif<br>
                                         地址:{{ $article->address }}
                                         {{ $article->user }}
                                     </p>
