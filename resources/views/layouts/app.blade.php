@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lovemap</title>
+    <title>Lovemap 愛心地圖</title>
 
     <link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
@@ -17,27 +17,24 @@
 <nav class="navbar toprow navbar-static-top">
     <div class="container">
         <div class="navbar-header">
-            <!-- Collapsed Hamburger -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            <!-- Collapsed Hamburger (折疊後) -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
+                {{--<span class="sr-only">Toggle Navigation</span>--}}
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <!-- Branding Image -->
-        </div>
-
-        <div class="collapse navbar-collapse top-link-a" id="app-navbar-collapse">
-            <!-- Left Side Of Navbar -->
             <a class="navbar-brand top-link-a" href="{{ url('/') }}">
                 LoveMap
             </a>
+            <!-- Branding Image -->
+        </div>
+        <div class="collapse navbar-collapse top-link-a" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <li><a class="top-link" href="{{ url('/map') }}">map</a></li>
             </ul>
-
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->

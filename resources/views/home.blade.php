@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="top_image">
-        <center><img src="resources/assets/img/hand2.png"></center>
+        <img src="resources/assets/img/hand2.png" style="width:99%">
     </div>
     <div class="title-text">
         <h1>Love Map</h1>
