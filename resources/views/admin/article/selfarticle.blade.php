@@ -13,21 +13,16 @@
                                 {!! implode('<br>', $errors->all()) !!}
                             </div>
                         @endif
-
                         {{--<a href="{{ url('admin/article/create') }}" class="btn btn-lg btn-primary">新增</a>--}}
-
                         @foreach ($user as $article)
                             {{--<hr>--}}
                             <div class="article">
-                                <h4>標題:{{ $article->title }}</h4>
+                                <h4>標題：{{ $article->title }}</h4>
                                 <div class="content">
                                     <p>
-                                        內容:{{ $article->body }}<br>
-                                        事件:@if($article->event==0)金援
-                                        @elseif($article->event==1)人力
-                                        @else物資
-                                        @endif<br>
-                                        地址:{{ $article->address }}
+                                        類別：@if($article->event==0)金援 @elseif($article->event==1)人力 @else物資 @endif<br>
+                                        地址：{{ $article->address }}<br>
+                                        內容：{{ $article->body }}
                                         {{ $article->user }}
                                     </p>
                                 </div>
@@ -39,8 +34,6 @@
                                 <button type="submit" class="btn btn-danger">刪除</button>
                             </form>
                         @endforeach
-
-
                     </div>
                 </div>
             </div>

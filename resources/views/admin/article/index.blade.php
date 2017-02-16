@@ -18,14 +18,11 @@
 
                         @foreach ($articles as $article)
                             <div class="article">
-                                <h4>標題:{{ $article->title }}</h4>
+                                <h4>標題：{{ $article->title }}</h4>
                                 <div class="content">
                                     <p>
-                                        地址:{{ $article->address }}<br>
-                                        事件:@if($article->event==0)金援
-                                        @elseif($article->event==1)人力
-                                            @else物資
-                                        @endif<br>
+                                        類別：@if($article->event==0)金援 @elseif($article->event==1)人力 @else物資 @endif<br>
+                                        地址：{{ $article->address }}<br>
                                         內容:{{ $article->body }}
                                     </p>
                                 </div>

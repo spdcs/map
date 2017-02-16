@@ -66,7 +66,6 @@
                                 <a href="#new" onclick="reply(this);">回覆</a>
                             </div>
                         </div>
-
                     @endforeach
                 </div>
                 @if(Auth::user())

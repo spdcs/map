@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">編輯留言</div>
+                    <div class="panel-heading">編輯文章</div>
                     <div class="panel-body">
 
                         @if (count($errors) > 0)
@@ -22,14 +22,22 @@
                         <form method="POST" action="{{ url('admin/article/'.$article->id) }}">
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
+                            <label>標題：</label>
                             <input type="text" name="title" class="form-control" required="required"
                                    placeholder="請輸入標題" value="{{ $article->title }}">
                             <br>
+                            <label>類別：</label>
+                            <input type="radio" name="event" class="form-check-input" value="0" @if($article->event==0)checked="checked"@else @endif>金錢
+                            <input type="radio" name="event" class="form-check-input" value="1" @if($article->event==1)checked="checked"@else @endif>人力
+                            <input type="radio" name="event" class="form-check-input" value="2" @if($article->event==2)checked="checked"@else @endif>物資
+                            {{--</div>--}}<br>
                             {{--<div class="form-group">--}}
+                            <label>地址：</label>
                             <input type="text" name="address" class="form-control" required="required"
                                    placeholder="請輸入地址" value="{{ $article->address }}">
                             {{--</div>--}}<br>
                             {{--<div class="form-group">--}}
+                            <label>內容：</label>
                             <textarea name="body" rows="10" class="form-control" required="required"
                                       placeholder="請輸入內容" >{{ $article->body }}</textarea>
                             {{--</div>--}}<br>
@@ -38,7 +46,7 @@
                             <input type="hidden" name="lng" class="form-control" required="required"
                                    value="{{ $article->lng }}">
                             {{--<div class="form-group">--}}
-                            <button type="submit" class="btn btn-lg btn-info">提交留言</button>
+                            <button type="submit" class="btn btn-lg btn-info">編輯完成</button>
                             {{--</div>--}}
                         </form>
                             <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
