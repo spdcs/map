@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="top_image">
-        <img src="resources/assets/img/hand2.png" style="width:99.9%">
+        <img src="resources/assets/img/hand2.png" class="img-responsive">
     </div>
     <div class="title-text">
         <h1>Love Map</h1>
@@ -28,10 +28,7 @@
                     <div class="panel-body">
                         <input type="hidden" value="{{$article->user_id}}">
                         <div class="body">
-                            <p>類別：@if($article->event==0)金援
-                                @elseif($article->event==1)人力
-                                @else物資
-                                @endif</p>
+                            <p>類別：@if($article->event==0)金援 @elseif($article->event==1)人力 @else物資 @endif</p>
                             <p>地址：{{ $article->address }}</p>
                             <p>內容：{{ $article->body }}</p>
                         </div>

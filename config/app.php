@@ -225,8 +225,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Mapper'=> Cornford\Googlmapper\Facades\MapperFacade::class,
+        'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Input' => Illuminate\Support\Facades\Input::class,
+        'providers' => array(
+            'Artdarek\OAuth\OAuthServiceProvider'
+        ),
+        'aliases' => array(
+            'OAuth' => 'Artdarek\OAuth\Facade\OAuth',
+        )
     ],
 
 ];
