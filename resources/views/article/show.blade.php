@@ -74,16 +74,16 @@
                             {!! csrf_field() !!}
                             <input type="hidden" name="article_id" value="{{ $article->id }}">
                             <div class="form-group">
-                                <label>Nickname</label>
+                                <label>暱稱</label>
                                 <input type="text" name="nickname" class="form-control" style="width: 300px;"
                                        required="required">
                             </div>
                             <div class="form-group">
-                                <label>Email address</label>
+                                <label>電子信箱</label>
                                 <input type="email" name="email" class="form-control" style="width: 300px;">
                             </div>
                             <div class="form-group">
-                                <label>Content</label>
+                                <label>內容</label>
                                 <textarea name="content" id="newFormContent" class="form-control" rows="10"
                                           required="required"></textarea>
                             </div>

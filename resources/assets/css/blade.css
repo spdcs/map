@@ -1,6 +1,19 @@
 .toprow{
     background-color: #e03256;
     border-color: #dd908c;
+    font-family:微軟正黑體; "Microsoft JhengHei" ,sans-serif;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #000000;
+}
+.navbar-default .navbar-nav>li>a{
+    color:#FFF;
+}
+.navbar-default .navbar-brand{
+    color:#FFF;
+}
+.navbar-default .navbar-brand:hover{
+    color:#FFF;
 }
 a{
     color: #000000;
@@ -29,7 +42,6 @@ a:link {
 .top-link:hover{
     -webkit-transform:rotatey(360deg);
     transform:rotatey(360deg);
-    color: #0019ff;
 }
 .top-link-a a{
     color: #ffffff;
@@ -40,10 +52,13 @@ a:link {
 .project{
     text-align: center;
     display: block;
-    margin-left: 33.33%;
+    margin: auto;
+}
+.icon_image_text{
+    float: left;
+    margin:auto 10%;
 }
 .icon_image{
-    float:left;
     border-radius: 50%;
     padding: 10px;
     -moz-box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
