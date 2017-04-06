@@ -6,7 +6,7 @@
     </div>
     <div class="title-text">
         <h1>Love Map</h1>
-        <div style="padding: 5px; font-size: 32px;">愛心訊息</div>
+        <h1 style="padding: 5px; font-size: 32px;">愛心訊息</h1>
     </div>
     <hr>
     <div class="container">

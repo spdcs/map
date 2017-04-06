@@ -47,12 +47,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
+        $valid = Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
+
+        if($valid->fails()){
+            return json_encode($valid->erros());
+        }
+
+        return true;
     }
+
 
     /**
      * Create a new user instance after a valid registration.

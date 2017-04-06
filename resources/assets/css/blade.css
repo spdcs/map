@@ -1,6 +1,8 @@
 .toprow{
     background-color: #e03256;
     border-color: #dd908c;
+}
+.toprow, title, body, h1, h3 {
     font-family:微軟正黑體; "Microsoft JhengHei" ,sans-serif;
 }
 .navbar-default .navbar-nav>li>a:hover{

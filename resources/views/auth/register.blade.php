@@ -33,8 +33,17 @@
                             </div>
                         </div>
 
+                        {{--<div class="form-group">--}}
+                            {{--<label for="email" class="col-md-4 control-label">會員身分</label>--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="0"> 民眾--}}
+                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="2"> 企業--}}
+                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="3"> 弱勢團體--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">密碼<br>(8字元以上)</label>
+                            <label for="password" class="col-md-4 control-label">密碼<br>(6字元以上)</label>
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
                                 @if ($errors->has('password'))

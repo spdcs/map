@@ -178,6 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -227,12 +228,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Input' => Illuminate\Support\Facades\Input::class,
-        'providers' => array(
-            'Artdarek\OAuth\OAuthServiceProvider'
-        ),
-        'aliases' => array(
-            'OAuth' => 'Artdarek\OAuth\Facade\OAuth',
-        )
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
     ],
 
 ];
