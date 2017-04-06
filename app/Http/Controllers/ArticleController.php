@@ -13,4 +13,13 @@ class ArticleController extends Controller
     {
         return view('article/show')->withArticle(Article::with('hasManyComments')->find($id));
     }
+
+    public function api_show($id)
+    {
+
+        $article = Article::find($id);
+
+      return json_encode($article);
+
+    }
 }

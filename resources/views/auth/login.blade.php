@@ -47,6 +47,9 @@
                                     登入
                                 </button>
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                    FB登入
+                                </a>
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     忘記密碼?
                                 </a>
                                 <a class="btn btn-link" href="{{ url('/register') }}">
