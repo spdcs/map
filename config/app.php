@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
     ],
 
     /*
