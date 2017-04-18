@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <div class="container">
         <div id="map" class="container-fluid" style="height: 800px; width: 1000px">
