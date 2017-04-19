@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\Passport;
 
 class HomeController extends Controller
 {
@@ -33,4 +34,9 @@ class HomeController extends Controller
         Article::find($id)->delete();
         return redirect()->back()->withInput()->withErrors('刪除成功！');
     }
+
+//    public function api_create()
+//    {
+//        return view('api_create');
+//    }
 }

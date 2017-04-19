@@ -34,12 +34,21 @@ Route::group(['middleware' => 'auth'], function() { //會員登入
     Route::get('login/fblogin/callback', 'Auth\LoginController@handleProviderCallback');
 });
 
+Route::group(['middleware' => ['api','cors'],'prefix' => 'api'], function () {
+    Route::post('register', 'ApiController@register');     // 註冊
+    Route::post('login', 'ApiController@login');           // 登入
+    Route::group(['middleware' => 'jwt.auth'], function () {
+        Route::post('get_user_details', 'APIController@get_user_details');  // 獲取用戶詳情
+    });
+});
+
 Route::resource('photo', 'PhotoController');//跑七項功能
 
 Route::get('article/{id}', 'ArticleController@show');
 //{id} 指代任意字符串，在我們的規劃中，此字段為文章 ID，為數字
 Route::get('api_article/{id}', 'ArticleController@api_show');
 Route::get('map', 'MapController@show');
+//Route::get('api_create', 'HomeController@api_create');
 //Route::get('map', 'MapController@index');
 
 Route::get('article/{id}/edit', 'ArticleController@edit');

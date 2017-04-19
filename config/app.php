@@ -180,6 +180,8 @@ return [
         Cornford\Googlmapper\MapperServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*
@@ -230,6 +232,7 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Input' => Illuminate\Support\Facades\Input::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
 
     ],
 
