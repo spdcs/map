@@ -19,15 +19,18 @@
                             {{$data['email']}}
                         </td>
                         <td>
-                            @if($data['level'] =='0')
-                                <input type="radio" name="level" value="0" checked> 會員 <input type="radio"
-                                                                                                name="level"
-                                                                                                value="1">管理員
-                            @endif
-                            @if($data['level'] =='1')
-                                <input type="radio" name="level" value="0"> 會員 <input type="radio" name="level"
-                                                                                        value="1" checked>管理員
-                            @endif
+                                @if($data['level'] =='0')
+                                    <input type="radio" name="level" value="0" checked> 會員 <input type="radio" name="level" value="1">管理員
+                                @endif
+                                @if($data['level'] =='1')
+                                    <input type="radio" name="level" value="0"> 會員 <input type="radio" name="level" value="1" checked>管理員
+                                @endif
+                                {{--@if($data['level'] =='2')--}}
+                                    {{--<input type="radio" name="level" value="3"> 弱勢團體 <input type="radio" name="level" value="2" checked> 企業 <input type="radio" name="level" value="0"> 會員 <input type="radio" name="level" value="1">管理員--}}
+                                {{--@endif--}}
+                                {{--@if($data['level'] =='2')--}}
+                                    {{--<input type="radio" name="level" value="3" checked> 弱勢團體 <input type="radio" name="level" value="2" checked> 企業 <input type="radio" name="level" value="0"> 會員 <input type="radio" name="level" value="1">管理員--}}
+                                {{--@endif--}}
                         </td>
                         <td>
                             <input type="submit" id="button" value="送出" class="btn"/>
