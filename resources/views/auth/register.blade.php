@@ -34,11 +34,11 @@
                         </div>
 
                         {{--<div class="form-group">--}}
-                            {{--<label for="email" class="col-md-4 control-label">會員身分</label>--}}
+                            {{--<label for="level" class="col-md-4 control-label">會員身分</label>--}}
                             {{--<div class="col-md-6">--}}
-                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="0"> 民眾--}}
-                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="2"> 企業--}}
-                                {{--<input id="event" type="radio" class="form-check-input" name="event" value="3"> 弱勢團體--}}
+                                {{--<input id="level" type="radio" class="form-check-input" name="level" value="0"> 民眾--}}
+                                {{--<input id="level" type="radio" class="form-check-input" name="level" value="2"> 企業--}}
+                                {{--<input id="level" type="radio" class="form-check-input" name="level" value="3"> 弱勢團體--}}
                             {{--</div>--}}
                         {{--</div>--}}
 
