@@ -60,7 +60,7 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a class="top-link" href="{{ url('/account') }}">帳號管理</a></li>
+                            {{--<li><a class="top-link" href="{{ url('/account') }}">帳號管理</a></li>--}}
                             <li><a href="{{ url('/logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();"><i
                                             class="top-link fa fa-btn fa-sign-out"></i>登出</a></li>
