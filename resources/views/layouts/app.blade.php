@@ -37,7 +37,7 @@
                 @if (Auth::guest())
                     <li><a class="top-link" href="{{ url('/login') }}">登入</a></li>
                     {{--<li><a class="top-link" href="{{ url('/register') }}">Register</a></li>--}}
-                @elseif (Auth::user()->level > 0)
+                @elseif (Auth::user()->level == 0)
                     <li><a class="top-link" href="{{ url('/admin/member/list') }}">會員管理</a></li>
                     <li><a class="top-link" href="{{ url('/admin/article') }}">管理文章</a></li>
                     <li class="dropdown">
