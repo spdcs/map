@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <label for="level" class="col-md-4 control-label">會員身分</label>
                             <div class="col-md-6">
-                                <input id="level" type="radio" class="form-check-input" name="level" value="1"> 會員
+                                <input id="level" type="radio" class="form-check-input" name="level" value="1" checked> 會員
                                 <input id="level" type="radio" class="form-check-input" name="level" value="2"> 企業
                                 <input id="level" type="radio" class="form-check-input" name="level" value="3"> 弱勢團體
                             </div>
