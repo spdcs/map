@@ -26,15 +26,21 @@
                             <input type="text" name="title" class="form-control" required="required"
                                    placeholder="請輸入標題" value="{{ $article->title }}">
                             <br>
+                            <label>地址：</label>
+                            <input type="text" name="address" class="form-control" required="required"
+                                   placeholder="請輸入地址" value="{{ $article->address }}">
+                            {{--</div>--}}<br>
+                            {{--<div class="form-group">--}}
                             <label>類別：</label>
                             <input type="radio" name="event" class="form-check-input" value="0" @if($article->event==0)checked="checked"@else @endif>金錢
                             <input type="radio" name="event" class="form-check-input" value="1" @if($article->event==1)checked="checked"@else @endif>人力
                             <input type="radio" name="event" class="form-check-input" value="2" @if($article->event==2)checked="checked"@else @endif>物資
                             {{--</div>--}}<br>
                             {{--<div class="form-group">--}}
-                            <label>地址：</label>
-                            <input type="text" name="address" class="form-control" required="required"
-                                   placeholder="請輸入地址" value="{{ $article->address }}">
+                            <label>類別：</label>
+                            <input type="radio" name="demand" class="form-check-input" value="0" @if($article->demand==0)checked="checked"@else @endif>小
+                            <input type="radio" name="demand" class="form-check-input" value="1" @if($article->demand==1)checked="checked"@else @endif>中
+                            <input type="radio" name="demand" class="form-check-input" value="2" @if($article->demand==2)checked="checked"@else @endif>大
                             {{--</div>--}}<br>
                             {{--<div class="form-group">--}}
                             <label>內容：</label>
