@@ -34,19 +34,25 @@
                             var iconBase = 'resources/assets/img/';
                             var icons = {
                                 0: {
-                                    icon: iconBase + 'money.png'
+                                    0: {icon: iconBase + 'money(0).png'},
+                                    1: {icon: iconBase + 'money(1).png'},
+                                    2: {icon: iconBase + 'money(2).png'}
                                 },
                                 1: {
-                                    icon: iconBase + 'people.png'
+                                    0: {icon: iconBase + 'people(0).png'},
+                                    1: {icon: iconBase + 'people(1).png'},
+                                    2: {icon: iconBase + 'people(2).png'}
                                 },
                                 2: {
-                                    icon: iconBase + 'box2.png'
+                                    0: {icon: iconBase + 'box(0).png'},
+                                    1: {icon: iconBase + 'box(1).png'},
+                                    2: {icon: iconBase + 'box(2).png'}
                                 }
                             };
 
                             var marker = new google.maps.Marker({
                                 position: myLatLng,
-                                icon: icons[json[i].event].icon,
+                                icon: icons[json[i].event][json[i].demand].icon,
                                 map: map
                             });
 
@@ -73,7 +79,7 @@
         <div class="project">
             <div class="form-inline icon_image_text">
                 <div class="icon_image">
-                    <img src="resources/assets/img/box2(2).png">
+                    <img src="resources/assets/img/box(3).png">
                 </div>
                 <div class="textbox">
                     <h3>物資</h3>
@@ -81,7 +87,7 @@
             </div>
             <div class="form-inline icon_image_text">
                 <div class="icon_image">
-                    <img src="resources/assets/img/people(2).png">
+                    <img src="resources/assets/img/people(3).png">
                 </div>
                 <div class="textbox">
                     <h3>人力</h3>
@@ -89,7 +95,7 @@
             </div>
             <div class="form-inline icon_image_text">
                 <div class="icon_image">
-                    <img src="resources/assets/img/money(2).png">
+                    <img src="resources/assets/img/money(3).png">
                 </div>
                 <div class="textbox">
                     <h3>金援</h3>

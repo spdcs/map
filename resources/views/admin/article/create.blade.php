@@ -34,6 +34,12 @@
                             <input type="radio" name="event" class="form-check-input" value="2">物資
                         </div>
                         <div class="form-group">
+                            <label>需求量：</label>
+                            <input type="radio" name="demand" class="form-check-input" value="0">小
+                            <input type="radio" name="demand" class="form-check-input" value="1">中
+                            <input type="radio" name="demand" class="form-check-input" value="2">大
+                        </div>
+                        <div class="form-group">
                             <label>內容：</label>
                             <textarea name="body" rows="10" class="form-control" required="required" placeholder="請輸入內容"></textarea>
                         </div>

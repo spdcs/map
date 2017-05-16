@@ -1,6 +1,6 @@
 <?php
 include("conn.php");
-$sql="select users.name, articles.title, articles.body, articles.address, articles.lat, articles.lng, articles.event from users LEFT JOIN articles ON articles.user_id=users.id order by articles.id desc";
+$sql="select users.name, articles.title, articles.body, articles.address, articles.lat, articles.lng, articles.event, articles.demand from users LEFT JOIN articles ON articles.user_id=users.id order by articles.id desc";
 $result=mysql_query($sql);
 //$row = mysql_fetch_array($result);
 $array = array();
