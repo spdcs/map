@@ -59,4 +59,5 @@ Auth::routes();
 Route::post('/admin/member', 'MemberController@save');
 
 Route::get('/', 'HomeController@index');
+Route::get('apimap', 'MapController@icon');
 

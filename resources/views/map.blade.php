@@ -8,7 +8,7 @@
         </div>
         <script type="text/javascript">
             function initMap() {
-                var URLs = "a.php";
+                var URLs = '/map/apimap';
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(23.795201261829853, 120.9694504737854);
                 var map = new google.maps.Map(document.getElementById('map'), {
@@ -17,11 +17,11 @@
                 });
                 $.ajax({
                     url: URLs,
-                    type: "GET",
+                    type: 'GET',
                     dataType: 'json',
                     success: function (json) {
                         for (var i = 0; i < json.length; i++) {
-                            var name = json[i].name;
+                            var name = json[i].user_id;
                             var title = json[i].title;
                             var event = json[i].event;
                             var body = json[i].body;

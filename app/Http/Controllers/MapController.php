@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use DB;
 use App\Article;
+use App\User;
 
 class MapController extends Controller
 {
@@ -15,6 +16,19 @@ class MapController extends Controller
         //return view('map')->withArticles(\App\Article::all());
         $articles = DB::table('articles')->get();
         return view('map',['article' => $articles]);
+    }
+
+    public function icon()
+
+    {
+        $article = Article::all();
+        foreach ($article as $key=>$value){
+            $user = $value->user_id;
+            $a = User::find($user);
+            $value->user_id = $a->name;
+        }
+        return (string) $article;
+
     }
 
 //    public function index(){
