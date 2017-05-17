@@ -3,7 +3,7 @@
 @section('content')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <div class="container">
-        <div id="map" class="container-fluid" style="height: 800px; width: 1000px">
+        <div id="map" class="container-fluid" style="height: 400px; width: 1000px">
             {{--{!! Mapper::render() !!}--}}
         </div>
         <script type="text/javascript">

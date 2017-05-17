@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="comeback pull-right" id="_top">
+        <a href="">top</a>
+    </div>
     <div class="top_image">
         <img src="resources/assets/img/hand2.png" class="img-responsive">
     </div>
@@ -38,4 +41,48 @@
             @endforeach
         </div>
     </div>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <script type='text/javascript'>
+        $(function () {
+            $(window).load(function () {
+                $(window).bind('scroll resize', function () {
+                    var $this = $(this);
+                    var $this_Top = $this.scrollTop();
+
+                    //當高度小於100時，關閉區塊
+                    if ($this_Top < 100) {
+                        $(".top").removeClass("test");
+                    }
+                    if ($this_Top > 100) {
+                        $(".top").addClass("test");
+                    }
+                }).scroll();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        //點擊top跑回頂端
+        $(document).ready(function () {
+            $('#_top').click(function () {
+                $('html,body').animate({scrollTop: 0}, 'slow');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        //隱藏top
+        $(document).ready(function () {
+            $("#_top").hide()
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 1) {//當window的scrolltop距離>1，top淡出，反之淡入
+                        $("#_top").fadeIn();
+                    } else {
+                        $("#_top").fadeOut();
+                    }
+                });
+            });
+
+
+        });
+    </script>
 @endsection
