@@ -22,6 +22,7 @@
                                 <div class="content">
                                     <p>
                                         類別：@if($article->event==0)金援 @elseif($article->event==1)人力 @else物資 @endif<br>
+                                        需求量：@if($article->demand==0)小 @elseif($article->demand==1)中 @else大 @endif<br>
                                         地址：{{ $article->address }}<br>
                                         內容：{{ $article->body }}
                                     </p>

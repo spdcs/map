@@ -77,12 +77,14 @@ class ArticleController extends Controller
             'address' => 'required',
             'lat' => 'required',
             'lng' => 'required',
+            'demand' => 'required',
         ]);
 
         $article = Article::find($id);
         $article->title = $request->get('title');
         $article->address = $request->get('address');
         $article->event = $request->get('event');
+        $article->demand = $request->get('demand');
         $article->body = $request->get('body');
         $article->lat = $request->get('lat');
         $article->lng = $request->get('lng');
